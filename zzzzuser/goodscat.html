@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品分类页</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style type="text/css">
+        .thumbnail:hover {
+            border: 1px solid #2D93CA;
+        }
+        .outzoom {
+            overflow: hidden;
+        }
+        .zoom {
+            position: relative;
+            transition: all 1.5s;
+
+        }
+        .zoom:hover {
+            transform: scale(1.5,1.5);
+        }
+    </style>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="header-grid">
+            <div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+                <ul>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
+                    <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="../zzzzuserlogin/userlogin.html">登录/注册</a></li>
+                    <li><i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i><a href="orderlist.html">我的订单</a></li>
+                    <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i><a href="shoppingcar.html">购物车</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="logo-nav">
+            <div class="logo-nav-left">
+                <h1><a href="userMain.html">SH Store <span>Shop anywhere</span></a></h1>
+            </div>
+            <div class="logo-nav-left1">
+                <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                        <ul class="nav navbar-nav">
+                            <li><a href="userMain.html">花店首页</a></li>
+                            <!-- Mega Menu -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">绿植花卉<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-2">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>花花园艺</h6>
+                                                <li><a href="goodscat.html">鲜花速递</a></li>
+                                                <li><a href="goodscat.html">商务用花</a></li>
+                                                <li><a href="goodscat.html">卡通花</a></li>
+                                                <li><a href="goodscat.html">干花</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>绿植盆栽</h6>
+                                                <li><a href="goodscat.html">多肉小萌植</a></li>
+                                                <li><a href="goodscat.html">苔藓微景观</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">园艺用品 <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-1">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>养植必备</h6>
+                                                <li><a href="goodscat.html">洒水壶</a></li>
+                                                <li><a href="goodscat.html">营养土</a></li>
+                                                <li><a href="goodscat.html">肥料</a></li>
+                                                <li><a href="goodscat.html">花器</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="logo-nav-left1 col-lg-4">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //header -->
+<!--面包屑导航-->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="userMain.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>花店首页</a></li>
+            <li class="active">绿植花卉</li>
+        </ol>
+    </div>
+</div>
+<!--面包屑导航结束-->
+<!--商品详情介绍开始-->
+<div class="container" style="margin-top: 20px;margin-bottom: 100px">
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <div class="outzoom">
+                    <a href="goodsdetail.html"><img src="images/09.jpg" alt="" class="img-responsive zoom" style="height: 250px"></a>
+                </div>
+                <div class="caption">
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <div class="outzoom">
+                    <a href="goodsdetail.html"><img src="images/02.jpg" alt="" class="img-responsive zoom" style="height: 250px"></a>
+                </div>
+                <div class="caption">
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <div class="outzoom">
+                    <a href="goodsdetail.html"><img src="images/09.jpg" alt="" class="img-responsive zoom" style="height: 250px"></a>
+                </div>
+                <div class="caption">
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <div class="outzoom">
+                    <a href="goodsdetail.html"><img src="images/09.jpg" alt="" class="img-responsive zoom" style="height: 250px"></a>
+                </div>
+                <div class="caption">
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--商品详情介绍结束-->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 footer-grid">
+                <h3>购物指南</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-th-list" aria-hidden="true"></i>购物流程</li>
+                    <li><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>意见反馈</li>
+                    <li><i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i>常见问题</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>联系方式</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>China, 广东省, <span>东莞市.</span></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>1124203375@qq.com</li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>支付方式</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>微信支付</li>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>支付宝支付</li>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>货到付款</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>权益保障</h3>
+                <ul>
+                    <li>全国包邮</li>
+                    <li>七天无理由退货</li>
+                    <li>退货运费补贴</li>
+                    <li>限时发货</li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="footer-logo">
+            <h2><a href="userMain.html">SH Store <span>shop anywhere</span></a></h2>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="application/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+</body>
+</html>

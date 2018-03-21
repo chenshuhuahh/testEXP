@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>订单列表</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .centerrow {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .marginrow {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+        .orderrow {
+            padding: 10px;
+            background-color: #f5f5f5;
+            font-size: 13px;
+        }
+        .firstrow {
+            color: #fff;
+            background-color: #D8703F;
+        }
+        .marginimg {
+            text-align: left;
+            padding-left: 30px;
+        }
+        .allrow:hover {
+            border: 1px solid #D8703F;
+        }
+    </style>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="header-grid">
+            <div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+                <ul>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
+                    <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="../zzzzuserlogin/userlogin.html">登录/注册</a></li>
+                    <li><i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i><a href="orderlist.html">我的订单</a></li>
+                    <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i><a href="shoppingcar.html">购物车</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="logo-nav">
+            <div class="logo-nav-left">
+                <h1><a href="userMain.html">SH Store <span>Shop anywhere</span></a></h1>
+            </div>
+            <div class="logo-nav-left1">
+                <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                        <ul class="nav navbar-nav">
+                            <li><a href="userMain.html">花店首页</a></li>
+                            <!-- Mega Menu -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">绿植花卉<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-2">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>花花园艺</h6>
+                                                <li><a href="goodscat.html">鲜花速递</a></li>
+                                                <li><a href="goodscat.html">商务用花</a></li>
+                                                <li><a href="goodscat.html">卡通花</a></li>
+                                                <li><a href="goodscat.html">干花</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>绿植盆栽</h6>
+                                                <li><a href="goodscat.html">多肉小萌植</a></li>
+                                                <li><a href="goodscat.html">苔藓微景观</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">园艺用品 <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-1">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>养植必备</h6>
+                                                <li><a href="goodscat.html">洒水壶</a></li>
+                                                <li><a href="goodscat.html">营养土</a></li>
+                                                <li><a href="goodscat.html">肥料</a></li>
+                                                <li><a href="goodscat.html">花器</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--<div class="logo-nav-left1 col-lg-4">-->
+                <!--<div class="input-group search-box">-->
+                    <!--<input type="text" class="form-control" placeholder="Search for...">-->
+                    <!--<span class="input-group-btn">-->
+                        <!--<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>-->
+                    <!--</span>-->
+                <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+<!-- //header -->
+<!--面包屑导航-->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="userMain.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>商店首页</a></li>
+            <li class="active">我的订单</li>
+        </ol>
+    </div>
+</div>
+<!--面包屑导航结束-->
+<!--订单列表开始-->
+<div class="checkout">
+    <div class="container">
+        <h3>你共有: <span>3 笔订单</span></h3>
+        <div class="row firstrow centerrow marginrow">
+            <div class="col-lg-4">商品</div>
+            <div class="col-lg-2">数量</div>
+            <div class="col-lg-1">单价(元)</div>
+            <div class="col-lg-1">总价(元)</div>
+            <div class="col-lg-2">商品状态</div>
+            <div class="col-lg-2">操作</div>
+
+        </div>
+        <div class="row marginrow allrow">
+            <div class="orderrow">2017/5/5 订单号：11 订单总价：225</div>
+            <div class="row centerrow" style="border-bottom: 1px solid #ccc">
+                <div class="col-lg-4 marginimg">
+                    <img src="" alt="" width="80px" height="80px">
+                    <span>商品名称</span>
+                </div>
+                <div class="col-lg-2">3</div>
+                <div class="col-lg-1">￥22</div>
+                <div class="col-lg-1">￥66</div>
+                <div class="col-lg-2">待评价</div>
+                <div class="col-lg-2"><a href="goodscomment.html">去评价</a></div>
+            </div>
+            <div class="row centerrow">
+                <div class="col-lg-4 marginimg">
+                    <img src="" alt="" width="80px" height="80px">
+                    <span>商品名称</span>
+                </div>
+                <div class="col-lg-2">3</div>
+                <div class="col-lg-1">￥22</div>
+                <div class="col-lg-1">￥66</div>
+                <div class="col-lg-2">待评价</div>
+                <div class="col-lg-2"><a href="goodscomment.html">去评价</a></div>
+
+            </div>
+        </div>
+        <div class="row marginrow allrow">
+            <div class="orderrow">2017/5/5 订单号：11 订单总价：225</div>
+            <div class="row centerrow">
+                <div class="col-lg-4 marginimg">
+                    <img src="" alt="" width="80px" height="80px">
+                    <span>商品名称</span>
+                </div>
+                <div class="col-lg-2">3</div>
+                <div class="col-lg-1">￥22</div>
+                <div class="col-lg-1">￥66</div>
+                <div class="col-lg-2">待评价</div>
+                <div class="col-lg-2"><a href="goodscomment.html">去评价</a></div>
+
+            </div>
+        </div>
+
+        <script type="application/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/slider.js"></script>
+    </div>
+</div>
+</body>
+</html>

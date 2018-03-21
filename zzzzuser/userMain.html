@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SHshop首页</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/lunbonormalize.css">
+    <link rel="stylesheet" href="css/lunbostyles.css">
+    <style type="text/css">
+        .leftsead{
+            width:47px;
+            height:49px;
+            background:url("images/l06.png");
+            position:fixed;
+            bottom:80px;
+            right: 0;
+            color:white;
+            z-index:2;
+            cursor:pointer;
+            display:none;
+            /*_position:absolute;*/
+            /*_top:expression(eval(document.documentElement.scrollTop || document.body.scrollTop) +eval(document.documentElement.clientHeight || document.body.clientHeight)*0.7 +'px');*/
+        }
+        .leftsead:hover{
+            background:url("images/l04.png");
+        }
+    </style>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="header-grid">
+            <div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+                <ul>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
+                    <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="../zzzzuserlogin/userlogin.html">登录/注册</a></li>
+                    <li><i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i><a href="orderlist.html">我的订单</a></li>
+                    <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i><a href="shoppingcar.html">购物车</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="logo-nav1">
+            <div class="logo-nav-left">
+                <h1><a href="userMain.html">SH Store <span>Shop anywhere</span></a></h1>
+            </div>
+            <div class="logo-nav-left1">
+                <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="userMain.html" class="act">花店首页</a></li>
+                            <!-- Mega Menu -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">绿植花卉<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-2">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>花花园艺</h6>
+                                                <li><a href="goodscat.html">鲜花速递</a></li>
+                                                <li><a href="goodscat.html">商务用花</a></li>
+                                                <li><a href="goodscat.html">卡通花</a></li>
+                                                <li><a href="goodscat.html">干花</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>绿植盆栽</h6>
+                                                <li><a href="goodscat.html">多肉小萌植</a></li>
+                                                <li><a href="goodscat.html">苔藓微景观</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">园艺用品 <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-1">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>养植必备</h6>
+                                                <li><a href="goodscat.html">洒水壶</a></li>
+                                                <li><a href="goodscat.html">营养土</a></li>
+                                                <li><a href="goodscat.html">肥料</a></li>
+                                                <li><a href="goodscat.html">花器</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="logo-nav-left1 col-lg-4">
+                <div class="input-group search-box">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div><!-- /input-group -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //header -->
+<!--<div class="clearfix"></div>-->
+<!-- banner -->
+<div class="banner">
+    <div class="myycontainer">
+        <div class="slider" id="slider">
+            <button type="button" class="button button-prev">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="button button-next">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- collections -->
+<div class="new-collections">
+    <div class="container">
+        <h3>新品上市</h3>
+        <p class="est">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+        <div class="new-collections-grids">
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/09.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px" /></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+                    </div>
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/02.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px" /></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+                    </div>
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/09.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px" /></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+
+                    </div>
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/09.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px" /></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+                    </div>
+                    <h4><a href="goodsdetail.html">Stones Bangles</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">257</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //collections -->
+<!-- collections -->
+<div class="new-collections">
+    <div class="container">
+        <h3>热销商品</h3>
+        <p class="est">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+        <div class="new-collections-grids">
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/01.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px"/></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+                    </div>
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/02.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px" /></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+                    </div>
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/03.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px" /></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+
+                    </div>
+                    <h4><a href="goodsdetail.html">Running Shoes</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">150</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 new-collections-grid">
+                <div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
+                    <div class="new-collections-grid1-image">
+                        <a href="goodsdetail.html" class="product-image"><img src="images/09.jpg" alt=" " class="img-responsive" style="width: 100%;height: 250px" /></a>
+                        <div class="new-collections-grid1-image-pos">
+                            <a href="goodsdetail.html">商品详情</a>
+                        </div>
+                    </div>
+                    <h4><a href="goodsdetail.html">Stones Bangles</a></h4>
+                    <p>Vel illum qui dolorem eum fugiat.</p>
+                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                        <p><span class="item_price glyphicon glyphicon-jpy">257</span><a class="item_add" href="shoppingcar.html">添加到购物车 </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //collections -->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 footer-grid">
+                <h3>购物指南</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-th-list" aria-hidden="true"></i>购物流程</li>
+                    <li><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>意见反馈</li>
+                    <li><i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i>常见问题</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>联系方式</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>China, 广东省, <span>东莞市.</span></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>1124203375@qq.com</li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>支付方式</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>微信支付</li>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>支付宝支付</li>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>货到付款</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>权益保障</h3>
+                <ul>
+                    <li>全国包邮</li>
+                    <li>七天无理由退货</li>
+                    <li>退货运费补贴</li>
+                    <li>限时发货</li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="footer-logo">
+            <h2><a href="userMain.html">SH Store <span>shop anywhere</span></a></h2>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<!--other-->
+<div class="leftsead"></div>
+<!--//other-->
+    <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+<script type="application/javascript">
+    //置顶按钮
+    $(window).scroll(function(){if($(document).scrollTop()>160){
+        $('.leftsead').fadeIn();
+    }else{
+        $('.leftsead').fadeOut();
+    }});
+    $('.leftsead').click(function(){
+        var timer=setInterval(function(){
+            if($(document).scrollTop()==0){
+                clearInterval(timer);
+            }else{
+                $(document).scrollTop($(document).scrollTop()-30);
+            }
+        },5);
+    });
+</script>
+</body>
+</html>

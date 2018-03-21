@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品详情</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        .checkout .col-lg-7 h2 {
+            font-weight: bold;
+            padding: 10px 0;
+        }
+        .col-lg-7 {
+            margin-left: 30px;
+        }
+        .myrow {
+            height: 30px;
+            line-height: 30px;
+            margin: 5px 0;
+        }
+        .myrow1 {
+            margin: 20px 0;
+        }
+        .price {
+            font-size: 20pt;
+            color: #d8703f;
+        }
+        .onecomment {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .onecomment:hover {
+            border: 1px solid #d8703f;
+        }
+        .thirdtime {
+            color: #ddd;
+            font-size: 10pt;
+        }
+        img {
+            vertical-align: top;
+        }
+        .box {
+            padding:0;
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .bigbox {
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            display: none;
+            z-index: 99;
+        }
+        .mask {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 0, 0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: move;
+            display: none;
+        }
+        .smallbox {
+            position: relative;
+        }
+        .bigbox img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="header-grid">
+            <div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+                <ul>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
+                    <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="../zzzzuserlogin/userlogin.html">登录/注册</a></li>
+                    <li><i class="glyphicon glyphicon-list-alt" aria-hidden="true"></i><a href="orderlist.html">我的订单</a></li>
+                    <li><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i><a href="shoppingcar.html">购物车</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="logo-nav">
+            <div class="logo-nav-left">
+                <h1><a href="userMain.html">SH Store <span>Shop anywhere</span></a></h1>
+            </div>
+            <div class="logo-nav-left1">
+                <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                        <ul class="nav navbar-nav">
+                            <li><a href="userMain.html">花店首页</a></li>
+                            <!-- Mega Menu -->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">绿植花卉<b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-2">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>花花园艺</h6>
+                                                <li><a href="goodscat.html">鲜花速递</a></li>
+                                                <li><a href="goodscat.html">商务用花</a></li>
+                                                <li><a href="goodscat.html">卡通花</a></li>
+                                                <li><a href="goodscat.html">干花</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>绿植盆栽</h6>
+                                                <li><a href="goodscat.html">多肉小萌植</a></li>
+                                                <li><a href="goodscat.html">苔藓微景观</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">园艺用品 <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-column columns-1">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <ul class="multi-column-dropdown">
+                                                <h6>养植必备</h6>
+                                                <li><a href="goodscat.html">洒水壶</a></li>
+                                                <li><a href="goodscat.html">营养土</a></li>
+                                                <li><a href="goodscat.html">肥料</a></li>
+                                                <li><a href="goodscat.html">花器</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--<div class="logo-nav-left1 col-lg-4">-->
+                <!--<div class="input-group search-box">-->
+                    <!--<input type="text" class="form-control" placeholder="Search for...">-->
+                    <!--<span class="input-group-btn">-->
+                        <!--<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>-->
+                    <!--</span>-->
+                <!--</div>&lt;!&ndash; /input-group &ndash;&gt;-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+<!-- //header -->
+<!--面包屑导航-->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="userMain.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>花店首页</a></li>
+            <li class="active">商品详情</li>
+        </ol>
+    </div>
+</div>
+<!--面包屑导航结束-->
+<!--商品详情开始-->
+<div class="checkout">
+    <div class="container">
+        <div class="row">
+            <!--图片放大镜-->
+            <div class="col-lg-5 box" id="fdj">
+                <div class="smallbox">
+                    <img src="images/09.jpg" alt="">
+                    <div class="mask"></div>
+                </div>
+                <div class="bigbox">
+                    <img src="images/09big.jpg" alt="">
+                </div>
+            </div>
+            <script>
+                var myscrolltop;
+                window.onscroll = function () {
+                    myscrolltop = document.body.scrollTop;
+                }
+                var fdj = document.getElementById("fdj");  // 获得最大的盒子
+                var small = fdj.children[0];  // 获得small 小图片 350盒子
+                var big = fdj.children[1];  // 获得 大图片 800 盒子
+                var mask = small.children[1];  // 小的黄色盒子
+                var bigImage = big.children[0]; // 大盒子里面的图片
+                small.onmouseover = function() {   // 鼠标经过显示出他们
+                    mask.style.display = "block";
+                    big.style.display = "block";
+                }
+                small.onmouseout = function() {
+                    mask.style.display = "none";
+                    big.style.display = "none";
+                }
+                //  鼠标在small 内移动
+                var x = 0;
+                var y = 0;
+                small.onmousemove = function(event) {
+                    var event = event || window.event;
+                    x = event.clientX - this.offsetParent.offsetLeft - mask.offsetWidth /2;  // 再某个盒子内的坐标);
+                    y = event.clientY - this.offsetParent.offsetTop - mask.offsetHeight /2 + myscrolltop;
+                    if(x < 0)
+                    {
+                        x = 0;
+                    }
+                    else if(x > small.offsetWidth - mask.offsetWidth)
+                    {
+                        x = small.offsetWidth - mask.offsetWidth;
+                    }
+                    if(y<0)
+                    {
+                        y = 0;
+                    }
+                    else if(y > small.offsetHeight - mask.offsetHeight)
+                    {
+                        y = small.offsetHeight - mask.offsetHeight;
+                    }
+                    mask.style.left = x + "px";
+                    mask.style.top = y + "px";
+                    bigImage.style.left =  -x *  big.offsetWidth /small.offsetWidth + "px";
+                    bigImage.style.top =  -y *  big.offsetHeight /small.offsetHeight + "px";
+
+                }
+            </script>
+            <div class="col-lg-7">
+                <div style="margin-bottom: 10px;border-bottom: 1px solid #ccc;padding-bottom: 5px">
+                    <h2>维达纸巾</h2>
+                    <span style="color: #888;">bhhhhhhhhh</span>
+                </div>
+
+                <div class="row myrow">
+                    <div class="col-lg-2">编号</div>
+                    <div>1
+                        <span class="pull-right" style="color: #d8703f;">累计销量：555</span>
+                    </div>
+
+                </div>
+                <div class="row myrow">
+                    <div class="col-lg-2">价格</div>
+                    <div>
+                        <span class="price">￥250</span>
+                        <span style="text-decoration:line-through;color: #888">￥500</span>
+                    </div>
+                </div>
+                <div class="row myrow1">
+                    <div class="col-lg-2">数量</div>
+                    <div class="quantity">
+                        <div class="quantity-select">
+                            <div class="entry value-minus">&nbsp;</div>
+                            <div class="entry value"><span>1</span></div>
+                            <div class="entry value-plus">&nbsp;</div>
+                            <span style="color: #999">(库存15件)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row myrow">
+                    <div class="col-lg-2">附送</div>
+                    <div>免费附送精美贺卡 代写您的祝福(您下单时可填写留言栏)</div>
+                </div>
+                <div class="row myrow">
+                    <div class="col-lg-2">配送</div>
+                    <div>全国市区免费配送 送货上门</div>
+                </div>
+                <div class="row myrow1">
+                    <div class="col-lg-2"></div>
+                    <div><a href="shoppingcar.html" class="btn btn-danger btn-lg">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;添加到购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--quantity数量-->
+        <script>
+            $('.value-plus').on('click', function(){
+                var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+                divUpd.text(newVal);
+            });
+
+            $('.value-minus').on('click', function(){
+                var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+                if(newVal>=1) divUpd.text(newVal);
+            });
+        </script>
+        <!--quantity-->
+        <!--商品介绍-->
+        <div class="myrow1" style="height: 500px;">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#detail" aria-controls="detail" role="tab" data-toggle="tab">商品详情</a></li>
+                <li role="presentation"><a href="#comment" aria-controls="comment" role="tab" data-toggle="tab">累计评论</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="detail">
+                    <div>
+                        <span class="glyphicon glyphicon-chevron-right"></span>&nbsp;商品名称：
+                        <span>纸巾</span>
+                    </div><hr>
+                    <div>
+                        <span class="glyphicon glyphicon-chevron-right"></span>&nbsp;商品产地：
+                        <span>纸巾</span>
+                    </div><hr>
+                    <div>
+                        <span class="glyphicon glyphicon-chevron-right"></span>&nbsp;商品规格：
+                        <span>纸巾</span>
+                    </div><hr>
+                    <div>
+                        <span class="glyphicon glyphicon-chevron-right"></span>&nbsp;商品描述：
+                        <span>纸巾</span>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="comment">
+                    <div class="onecomment">
+                        <div style="margin-bottom: 5px"><span class="glyphicon glyphicon-heart-empty"></span>&nbsp;用户名：<span>nihao</span></div>
+                        <div style="margin-bottom: 5px"><span class="glyphicon glyphicon-pencil"></span>&nbsp;评论：<span>nihao</span></div>
+                        <div class="thirdtime">2017/2/5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3 footer-grid">
+                <h3>购物指南</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-th-list" aria-hidden="true"></i>购物流程</li>
+                    <li><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i>意见反馈</li>
+                    <li><i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i>常见问题</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>联系方式</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>China, 广东省, <span>东莞市.</span></li>
+                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>1124203375@qq.com</li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 890</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>支付方式</h3>
+                <ul>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>微信支付</li>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>支付宝支付</li>
+                    <li><i class="glyphicon glyphicon-hand-right" aria-hidden="true"></i>货到付款</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-grid">
+                <h3>权益保障</h3>
+                <ul>
+                    <li>全国包邮</li>
+                    <li>七天无理由退货</li>
+                    <li>退货运费补贴</li>
+                    <li>限时发货</li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="footer-logo">
+            <h2><a href="userMain.html">SH Store <span>shop anywhere</span></a></h2>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<script type="application/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+</body>
+</html>

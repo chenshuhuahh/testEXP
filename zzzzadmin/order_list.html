@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>订单列表</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        @media (min-width: 768px) {
+            th {
+                text-align: center;
+            }
+        }
+        .mysearch {
+            width: 250px;
+            margin: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+<ol class="breadcrumb" style="margin-top: 0">
+    <li><a href="#"><span class="glyphicon glyphicon-home"></span> 后台</a></li>
+    <li><a href="#">订单管理</a></li>
+    <li class="active">订单列表</li>
+</ol>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">订单列表</div>
+
+            <div class="panel-body">
+                <!--搜索框-->
+                <div class="input-group mysearch pull-left">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+                <span class="pull-right">共有54条记录</span>
+                <table class="table table-hover table-bordered" style="text-align: center">
+                    <thead>
+                    <tr class="success">
+                        <th>订单编号</th>
+                        <th>用户编号</th>
+                        <th>收货人姓名</th>
+                        <th>收货人地址</th>
+                        <th>收货人电话</th>
+                        <th>买家留言</th>
+                        <th>订单状态</th>
+                        <th>总额</th>
+                        <th>订单日期</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>小乞儿</td>
+                        <td>代理商顶顶顶顶</td>
+                        <td>18814379708</td>
+                        <td>巫妖要学水水水水</td>
+                        <td>未发货</td>
+                        <td>20</td>
+                        <td>2017/2/5</td>
+                        <td>
+                            <a href="order_details.html" alt="详情" title="详情" class="btn btn-primary">详情</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination pull-right">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="application/javascript" src="js/bootstrap.min.js"></script>
+<!--<script>-->
+<!--document.getElementById("addgoods").onclick = function () {-->
+<!--window.opener.document.getElementById("page_main").location.href="goods_add.html";-->
+<!--}-->
+
+<!--</script>-->
+</body>
+</html>

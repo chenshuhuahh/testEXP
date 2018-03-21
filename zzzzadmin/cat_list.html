@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>分类列表</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="js/tree_themes/SimpleTree.css"/>
+    <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+    <script type="text/javascript" src="js/SimpleTree.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".st_tree").SimpleTree({
+                click:function(a){
+                    if(!$(a).attr("hasChild"))
+                        alert($(a).attr("ref"));
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        @media (min-width: 768px) {
+            th {
+                text-align: center;
+            }
+        }
+        #addcat {
+            margin-bottom: 10px;
+        }
+        .mysearch {
+            width: 250px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<ol class="breadcrumb" style="margin-top: 0">
+    <li><a href="#"><span class="glyphicon glyphicon-home"></span> 后台</a></li>
+    <li><a href="#">分类管理</a></li>
+    <li class="active">分类列表</li>
+</ol>
+<div class="row">
+    <div class="col-sm-2">
+        <div class="st_tree">
+            <ul>
+                <li><a href="#" ref="hyjm">欢迎界面</a></li>
+                <li><a href="#" ref="xtgl">系统管理</a></li>
+                <ul show="true">
+                    <li><a href="#" ref="yhgl">用户管理</a></li>
+                    <li><a href="#" ref="rzck">日志查看</a></li>
+                </ul>
+                <li><a href="#" ref="ckgl">仓库管理</a></li>
+                <ul>
+                    <li><a href="#" ref="kcgl">库存管理</a></li>
+                    <li><a href="#" ref="shgl">收货管理</a></li>
+                    <li><a href="#" ref="fhgl">发货管理</a></li>
+                    <ul>
+                        <li><a href="#" ref="yhgl">用户管理</a></li>
+                        <li><a href="#" ref="rzck">日志查看</a></li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-10">
+        <div class="panel panel-default">
+            <div class="panel-heading">分类列表</div>
+
+            <div class="panel-body">
+                <a class="btn btn-primary pull-left" type="button" id="addcat" name="addcat" target="main_frame" href="cat_add.html">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    添加分类
+                </a>
+                <!--搜索框-->
+                <div class="input-group mysearch pull-left">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+                <span class="pull-right">共有54条记录</span>
+                <table class="table table-hover table-bordered" style="text-align: center">
+                    <thead>
+                    <tr class="success">
+                        <th>分类编号</th>
+                        <th>分类名称</th>
+                        <th>备注</th>
+                        <th>上级分类</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>水果</td>
+                        <td>小乞儿</td>
+                        <td>红色</td>
+                        <td>
+                            <a href="cat_change.html" alt="修改" title="修改"><span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
+                            <a href="" alt="删除" title="删除"><span class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination pull-right">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>-->
+<script type="application/javascript" src="js/bootstrap.min.js"></script>
+<!--<script>-->
+<!--document.getElementById("addgoods").onclick = function () {-->
+<!--window.opener.document.getElementById("page_main").location.href="goods_add.html";-->
+<!--}-->
+
+<!--</script>-->
+</body>
+</html>
